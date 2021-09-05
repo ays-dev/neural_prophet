@@ -63,7 +63,7 @@ def plot(fcst, ax=None, xlabel="ds", ylabel="y", highlight_forecast=None, line_p
             ax.plot(ds, fcst["yhat{}".format(highlight_forecast)], ls="-", c="b")
             ax.plot(ds, fcst["yhat{}".format(highlight_forecast)], "bx")
 
-    ax.plot(ds, fcst["y"], "k.")
+    ax.plot(ds, fcst["y"], color = "red")
 
     # Specify formatting to workaround matplotlib issue #12925
     locator = AutoDateLocator(interval_multiples=False)
